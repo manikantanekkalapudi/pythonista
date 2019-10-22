@@ -5,14 +5,14 @@ In inheritance, the child class acquires the properties and can access all the d
 '''
 class Employee:
 
-    # class variables
-    num_of_emps = 0 # variable to count the no. of employees
+    # Class variables
+    num_of_emps = 0 # Variable to count the no. of employees
     raise_amount = 1.04
 
     # '''__init__ is the constructor for the class and 
     # all the variables that the class takes can be initialized here
     def __init__(self, first, last, pay):
-        # instance variables initialized in the constructor
+        # Instance variables initialized in the constructor
         self.first = first;
         self.last = last;
         self.email = first +'.'+ last +'@company.com' ;
@@ -21,16 +21,15 @@ class Employee:
         # This variable doesn't need to 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1
 
-    # class method
-    # if we forget 'self' parameter for methods it'll throw 
-    # "<method_name> takes 0 positional arguments but 1 was given" error-> it's confusing
-    # Regular method in a class takes self param by covention 
+    '''Class method-> They'll have self as the first param
+    If we forget 'self' parameter for method param it'll throw the following error:
+    "<method_name> takes 0 positional arguments but 1 was given" error-> it's confusing message!'''
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
     
-    # class method to apply the raise   
+    # Class method to apply the raise   
     def apply_raise(self):
-        #we can also use 'Employee.raise_amount' or 'self.raise_amount' but never only 'raise_amount'
+        #We can also use 'Employee.raise_amount' or 'self.raise_amount' but never only 'raise_amount'
         self.pay = self.pay * self.raise_amount 
     
     # This is using the decorators to declare classmethod
@@ -39,17 +38,18 @@ class Employee:
         cls.raise_amount = amount
 
 
-    # class methods as alternative constructors -> use these classmethods in order to provide multiple ways of creating objects
+    # Class methods as alternative constructors -> use these classmethods in order to provide multiple ways of creating objects
     @classmethod
     def from_string(cls, emp_str):
         first, last, pay = emp_str.split('-')
         # Employee is nothing but cls
         return cls(first, last, pay)
 
-    # Source: https://www.journaldev.com/18722/python-static-method
-    # Static method -> Static methods in Python are extremely similar to python class level methods, the difference being that a static method is bound to a class rather than the objects for that class.
-    # This means that a static method can be called without an object for that class. This also means that static methods cannot modify the state of an object as they are not bound to it. Let’s see how we can create static methods in Python.
-    # Static method -> It has a logical connection to the class but doesn't depend on any specific instance of the class or class variable
+    '''Source: https://www.journaldev.com/18722/python-static-method
+    Static method -> Static methods in Python are extremely similar to python class level methods, the difference being that a static method is bound to a class rather than the objects for that class.
+    This means that a static method can be called without an object for that class. This also means that static methods cannot modify the state of an object as they are not bound to it. Let’s see how we can create static methods in Python.
+    
+    Static method -> It has a logical connection to the class but doesn't depend on any specific instance of the class or class variable'''
     @staticmethod
     def is_workday(day):  #doesn't take an instance or a class as the first argument and we can pass any argument
         if (day.weekday() == 5) or (day.weekday()) == 6:
@@ -95,10 +95,11 @@ class Manager(Employee):
         for emp in self.employees:
             print('-->', emp.fullname())
 
+# Instantiating Employee class with all the required values for the constructor variables
 # dev1 = Employee('Manikantha', 'Nekkalapudi', 50000); -> This'll have 1.04 as raise_amount even after the inheritence change
 # dev1.apply_raise() -> It's seen here
 
-# Instance of the class initialized with all the necessary class variables
+# Instantiating Developer class with all the required values for the constructor variables
 dev1 = Developer('Manikantha', 'Nekkalapudi', 50000, 'java')
 dev2 = Developer('Test', 'User', 60000, 'python')
 

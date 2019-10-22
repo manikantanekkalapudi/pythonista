@@ -1,12 +1,12 @@
-# Employee class to replicate the EMS 
+# Employee class to replicate the Employee Management System 
 class Employee:
 
-    # class variables
-    num_of_emps = 0 # variable to count the no. of employees
+    # Class variables
+    num_of_emps = 0 # variable to count the no. of instantiations of Employee class (which is no. of employees)
     raise_amount = 1.04
 
-    # '''__init__ is the constructor for the class and 
-    # all the variables that the class takes can be initialized here
+    '''__init__ is the constructor for the class and 
+    all the variables that the class takes can be initialized here'''
     def __init__(self, first, last, email, pay):
         # instance variables initialized in the constructor
         self.first = first;
@@ -14,42 +14,47 @@ class Employee:
         self.email = email;
         self.pay = pay;
         
-        # This variable doesn't need to 'self' as it belongs to the class and not any particular instance
+        # This variable doesn't need to have 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1
 
-    # class method
-    # if we forget 'self' parameter for methods it'll throw 
-    # "<method_name> takes 0 positional arguments but 1 was given" error-> it's confusing
+    '''Class method-> They'll have self as the first param
+    If we forget 'self' parameter for method param it'll throw the following error:
+    "<method_name> takes 0 positional arguments but 1 was given" error-> it's confusing message!'''
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
     
-    # class method to apply the raise   
+    # Class method to apply the raise   
     def apply_raise(self):
         #we can also use 'Employee.raise_amount' or 'self.raise_amount' but never only 'raise_amount'
+        # because it is a class variable
         self.pay = self.pay * self.raise_amount 
 
-# Instance of the class initialized with all the necessary class variables
+# Initializing Employee class with the suitable input values for the constructor
 emp1 = Employee('Manikantha', 'Nekkalapudi', 'mani@mycompany', 50000);
 emp2 = Employee('Test', 'User', 'test.user@mycompany', 60000);
-# printing the class variable after instantiating
+# Printing the class variable after instantiating
 print(emp1.email)
 
-# This is to print the full name and can be achieved using method too 
+# This is to print the full name and can be achieved using fullname() class method too 
 print('{} {}'.format(emp1.first, emp1.last))
 
-# function call to get the full name
+# Function call to get the full name of the employee
 print(emp1.fullname())
 
 # The following two lines will do the same
 print(emp2.fullname())
 # print(Employee.fullname(emp2)) #this is using class directly
 
-# call the apply_raise method
+# Call the apply_raise method
 print(emp1.raise_amount) # or print(Employee.raise_amount)
+# Print the updated pay
 print(emp1.pay)
 emp1.apply_raise()
 print(emp1.pay)
 
+'''Source: https://code.tutsplus.com/tutorials/what-are-python-namespaces-and-why-are-they-needed--cms-28598
+Namespace-> It is basically a system to make sure that all the names in a program are unique and can be used without any conflict.
+There is a name-to-object mapping, with the names as keys and the objects as values'''
 # Namespace for the class and the instance of the class
 print(emp1.__dict__) #this instance doesn't have the raise_amount variable and it'll get it from the class
 print(Employee.__dict__) # class has the raise_amount variable
