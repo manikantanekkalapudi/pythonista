@@ -7,11 +7,11 @@ class Employee:
 
     '''__init__ is the constructor for the class and 
     all the variables that the class takes can be initialized here'''
-    def __init__(self, first, last, email, pay):
-        # instance variables initialized in the constructor
+    def __init__(self, first, last, pay):
+        # Instance variables initialized in the constructor
         self.first = first;
         self.last = last;
-        self.email = email;
+        self.email = first.lower() +'.'+ last.lower() +'@company.com' ;
         self.pay = pay;
         
         # This variable doesn't need to have 'self' as it belongs to the class and not any particular instance
@@ -30,8 +30,8 @@ class Employee:
         self.pay = self.pay * self.raise_amount 
 
 # Initializing Employee class with the suitable input values for the constructor
-emp1 = Employee('Manikantha', 'Nekkalapudi', 'mani@mycompany', 50000);
-emp2 = Employee('Test', 'User', 'test.user@mycompany', 60000);
+emp1 = Employee('Manikantha', 'Nekkalapudi', 50000);
+emp2 = Employee('Test', 'User', 60000);
 # Printing the class variable after instantiating
 print(emp1.email)
 
