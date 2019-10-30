@@ -1,4 +1,5 @@
-'''List Comprehensions in Python'''
+'''List Comprehensions in Python
+video-> https://youtu.be/ajrtAuDg3yw'''
 
 # Declaring a list of numbers
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -74,8 +75,7 @@ def gen_func(nums):
 
 # Both the lines will generate the same input
 # my_gen = gen_func(nums)
-my_gen = (n*n for n in nums)
+my_gen = (n*n for n in nums) # This is a generator comprehension
 
 for i in gen_func(nums):
     print(i)
-

@@ -1,4 +1,6 @@
-''' Loops and Iterations - For/While Loops '''
+''' Loops and Iterations - For/While Loops 
+video-> https://youtu.be/6iF8Xb7Z3wQ
+'''
 
 # Looping through a list
 nums = [1,3,4,5,63,4,8]
@@ -7,7 +9,7 @@ for num in nums:
     print(num)
 print('*'*50) 
 '''
-Break-> Stops the loop completely and executes the later statements
+Break-> Stops the loop completely and executes the later statements in the function
 Continue-> Stops the current iteration and continues the execution with next iteration
 '''
 # Break
@@ -26,12 +28,12 @@ for num in nums:
         continue
     print(num)
 print('*'*50)
-# Range->The lower limit(start) in range is inclusive and upper limit(end) is exclusive. step is the interval between the consequtive numbers in the range
+# Range->The lower limit(start) in range is inclusive and upper limit(end) is exclusive. step is the interval between the consecutive numbers in the range
 # range(start,end, step)
 for i in range(0,10,2):
     print(i)
 print('*'*50)
-# While loop->it'll continue till the condition is False. The condition should be Flase at some point
+# While loop->it'll continue till the condition is False. The condition should be False at some point
 x = 0
 while x <= 10:
     print(x)

@@ -1,4 +1,6 @@
-'''Strings in Python'''
+'''Strings in Python
+Video-> https://youtu.be/k9TUPpGqYTo
+'''
 
 # Variable holding a simple string value
 message = 'Hello world!'
@@ -22,11 +24,11 @@ print(message)
 # Length of the string
 print(len(message))
 
-# Indexing in string-> indexing starts from 0 at the first char in the String
+# Indexing in string-> indexing starts from 0 at the first char in the String but a String is not mutable
 print(message[4])
 
-# Slicing and Dicing of the string-> first value of the slice(0) is inclusive and the last value is exluded. 
-# i.e., only till 0 to 5 values are considered. [:6]->This starts from 0th index. [6:]-> starts from 6 till the end of string
+# Slicing and Dicing of the string-> first value of the slice(0) is inclusive and the last value is exlcuded. 
+# i.e., only till 0 to 5 values are considered. [:6]->This starts from 0th index and includes till 5th index. [6:]-> starts from 6 till the end of string
 print(message[0:6])
 
 # String in lower case
@@ -36,7 +38,7 @@ print(message.lower()) # Similarly for uppercase -> .uppercase()
 print(message.count('I'))
 
 # Find a char/substring in a string
-print(message.find('Ironman')) #This prints the starting/lower index of occurance of Ironman. i.e., 4. If not found, -1 will be returned
+print(message.find('Ironman')) # This prints the starting/lower index of occurance of 'Ironman' sub-string. i.e., 4. If not found, -1 will be returned
 
 # Replacing a substring in a string. Here 'message.replace' will return a new string and it should be stored in a new string
 new_message = message.replace('''I'm Ironman!
@@ -59,7 +61,7 @@ print(message)
 message = f'{greeting} {name.upper()}. Welcome!'
 print(message)
 
-# dir() will give all the attributes and methods for that variable. Here we're passing a string
+# dir() will give all the attributes and methods for that variable. Here we're passing a string object
 print(dir(message))
 '''
 O/p for a string variable:

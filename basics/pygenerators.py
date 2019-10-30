@@ -1,4 +1,6 @@
-'''Generators in Python- How to use them and the benefits you receive'''
+'''Generators in Python- How to use them and the benefits you receive
+video-> https://youtu.be/bD05uGo_sVI
+'''
 
 # Current method
 def square_nums(nums):

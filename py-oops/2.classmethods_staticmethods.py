@@ -1,4 +1,6 @@
-'''We'll learn about regular methods, class methods and static methods'''
+'''We'll learn about regular methods, class methods and static methods
+video-> https://youtu.be/BJ-VvGyQxho
+'''
 import datetime
 class Employee:
 
@@ -10,10 +12,10 @@ class Employee:
     # all the variables that the class takes can be initialized here
     def __init__(self, first, last, pay):
         # Instance variables initialized in the constructor
-        self.first = first;
-        self.last = last;
-        self.email = first +'.'+ last +'@company.com' ;
-        self.pay = pay;
+        self.first = first
+        self.last = last
+        self.email = first +'.'+ last +'@company.com'
+        self.pay = pay
         
         # This variable doesn't need to 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1

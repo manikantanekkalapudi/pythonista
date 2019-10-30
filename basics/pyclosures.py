@@ -1,4 +1,6 @@
 '''Closures in Python- How to Use Them and Why They Are Useful
+video-> https://youtu.be/swU3c34d2NQ
+
 Pre-requisite: Know about First class functions from firstclassfunction.py
 '''
 

@@ -1,4 +1,6 @@
-'''Namedtuple in Python - When and why should you use namedtuples?'''
+'''Namedtuple in Python - When and why should you use namedtuples?
+video-> https://youtu.be/GfxJYp9_nJA
+'''
 # Importing namedtuple
 from collections import namedtuple
 
@@ -7,7 +9,7 @@ color = (55, 155, 255)
 print(color[0])
 
 # Tuple can be very confusing and less informative about it's purpose and etc. after some time like 6 months
-# So, dict
+# So, dict. Dict is great but everytime you declare a dict you need to type all the keys and values
 color = {'red':55, 'green':155, 'blue':255}
 print(color['red'])
 

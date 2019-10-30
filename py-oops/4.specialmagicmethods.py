@@ -1,4 +1,7 @@
 '''
+Special (Magic/Dunder) Methods in Python
+video-> https://youtu.be/3ohzBxoFHAY
+
 Source: https://dbader.org/blog/python-dunder-methods
 Special methods or Magic methods or Dunder Methods:
     Dunder methods let you emulate the behavior of built-in types. 
@@ -17,10 +20,10 @@ class Employee:
     all the variables that the class takes can be initialized here'''
     def __init__(self, first, last, email, pay):
         # instance variables initialized in the constructor
-        self.first = first;
-        self.last = last;
-        self.email = email;
-        self.pay = pay;
+        self.first = first
+        self.last = last
+        self.email = email
+        self.pay = pay
         
         # This variable doesn't need to have 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1

@@ -1,4 +1,6 @@
 '''First-Class Functions in Python
+video-> https://youtu.be/kr0mpwqttM0
+
 Source: https://en.wikipedia.org/wiki/First-class_function
 In computer science, a programming language is said to have first-class functions if it treats functions as first-class citizens.
 This means the language supports passing functions as arguments to other functions,
@@ -18,7 +20,7 @@ f = square(5) # Assigning a square() call with 5 to a variable f and now f holds
 print(square) # Prints '<function square at <location>>'
 print(f)      # Prints result 25
 
-f = square    # Here f and square point to the same function
+f = square    # Here f and square point to the same function location
 print(f)
 print(f(5))   # This returns 25
 

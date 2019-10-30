@@ -1,6 +1,8 @@
 '''Integers and Float in Python
 Integer-> Whole number
-Float-> Decimal number'''
+Float-> Decimal number
+Video-> https://youtu.be/khKv-8q7YmY
+'''
 
 # Integer variable
 
@@ -26,7 +28,7 @@ print(type(num))
 # Floor division
 print(3//2) # Prints 1
 
-# Python follows BODMAS rule
+# Python follows BODMAS rule for solving expressions
 
 
 # Increment

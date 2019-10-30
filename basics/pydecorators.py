@@ -1,4 +1,6 @@
 '''Decorators in Python - Dynamically Alter The Functionality Of Your Functions
+video-> https://youtu.be/FsAPt_9Bf3U
+
 Pre-requisite: 
 1. Know about First class functions from firstclassfunction.py
 2. Know about Closures from pyclosures.py
@@ -24,8 +26,7 @@ from functools import wraps
 # This is the Decorator function which takes a function as an input argument
 def decorator_function(original_function):
     # This is a Wrapper function which returns the result of 'original_function' passed to 'decorator_function'
-    # Add '*args, **kwargs' to the function parameters so that the below function can run with any kinds of parameters
-    def wrapper_function(*args, **kwargs):
+    def wrapper_function(*args, **kwargs): # Add '*args, **kwargs' to the function parameters so that the below function can run with any kinds of parameters
         # Any functionality can be added and the following line is added after the creation of the decorator
         print('Wrapper executed this before {}'.format(original_function.__name__))
         

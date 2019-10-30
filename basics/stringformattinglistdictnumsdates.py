@@ -1,4 +1,7 @@
-'''String Formatting - Advanced Operations for Dicts, Lists, Numbers, and Dates in Python'''
+'''String Formatting - Advanced Operations for Dicts, Lists, Numbers, and Dates in Python
+Video-> https://youtu.be/vTX3IwquFkc
+'''
+
 # Declaring a dict
 person_dict = {'name': 'Jenn', 'age': 23}
 
@@ -65,10 +68,9 @@ my_date = datetime.datetime(2016, 9, 24, 12, 30, 45)
 print(my_date)
 
 # String formatting a date
-sentence = '{:%B %d %Y}'.format(my_date) # Here %B->Month(like September) %d->Day in date %Y->full year
+sentence = '{:%B %d %Y}'.format(my_date) # Here %B->Month string(like September) %d->Day in date %Y->full year
 print(sentence)
 
 # Format like this-> March 01, 2016 fell on a Tuesday and was the 061 day of the year.
 sentence = '{0:%B %d, %Y} fell on a {0:%A} and was the {0:%j} day of the year'.format(my_date)
 print(sentence)
-

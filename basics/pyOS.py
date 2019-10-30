@@ -1,4 +1,6 @@
-'''OS Module - Use Underlying Operating System Functionality in Python'''
+'''OS Module - Use Underlying Operating System Functionality in Python
+video-> https://youtu.be/tJxcKyFMTGo
+'''
 # import os module
 import os
 # All the attributes and methods in the os module
@@ -36,7 +38,7 @@ print(os.stat('demo.txt').st_mtime)
 
 from datetime import datetime
 mod_time = os.stat('demo.txt').st_mtime
-print(datetime.fromtimestamp(mod_time))
+print(datetime.fromtimestamp(mod_time)) # Prints date in human readable format
 
 # See all the directory tree and the files
 for dirpath, dirnames, filenames in os.walk(top='/home/cyborg/Documents'): # This is a generator that yields a tuple of 3 values (dir path, dir within that path, file in that path)
@@ -55,13 +57,13 @@ file_path = os.path.join(os.environ.get('HOME'), 'test.txt')
 print(file_path) # This adds all the / exactly and generates a path
 
 # File name from a path
-print(os.path.basename('/tmp/test.txt')) # Doesn't have to be a real path
+print(os.path.basename('/tmp/test.txt')) # Doesn't have to be a real path. Print filename
 
 # Dir in the path
-print(os.path.dirname('/tmp/test.txt'))
+print(os.path.dirname('/tmp/test.txt')) # Prints the path except filename
 
 # Both Dir name and File name from a path
-print(os.path.split('/tmp/test.txt')) #T his return a tuple
+print(os.path.split('/tmp/test.txt')) # This return a tuple
 
 # Check if path exists
 print(os.path.exists('/tmp/test.txt')) # Returns False

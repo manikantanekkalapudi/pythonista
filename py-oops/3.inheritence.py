@@ -1,4 +1,7 @@
 '''
+Inheritence in Python
+video-> https://youtu.be/RSl87lqOXDE
+
 Source: https://www.javatpoint.com/inheritance-in-python
 Inheritance is an important aspect of the object-oriented paradigm. Inheritance provides code reusability to the program because we can use an existing class to create a new class instead of creating it from scratch.
 In inheritance, the child class acquires the properties and can access all the data members and functions defined in the parent class. A child class can also provide its specific implementation to the functions of the parent class.
@@ -13,10 +16,10 @@ class Employee:
     # all the variables that the class takes can be initialized here
     def __init__(self, first, last, pay):
         # Instance variables initialized in the constructor
-        self.first = first;
-        self.last = last;
-        self.email = first +'.'+ last +'@company.com' ;
-        self.pay = pay;
+        self.first = first
+        self.last = last
+        self.email = first +'.'+ last +'@company.com'
+        self.pay = pay
         
         # This variable doesn't need to 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1

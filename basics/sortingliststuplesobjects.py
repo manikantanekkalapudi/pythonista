@@ -1,4 +1,6 @@
-'''Sorting Lists, Tuples, Dict and Objects in Python'''
+'''Sorting Lists, Tuples, Dict and Objects in Python
+video-> https://youtu.be/D3JvDWO-BY4
+'''
 
 # Declaring a list
 lst = [9, 1, 8, 2, 7, 3, 6, 4, 5]
@@ -69,7 +71,7 @@ print(sorted_emp)
 sorted_emp = sorted(employees, key=lambda e: e.name)
 print(sorted_emp)
 
-# Using attrgetter
+# Using attrgetter instead of custom e_sort(). Both does the same work.
 from operator import attrgetter
 
 sorted_emp = sorted(employees, key = attrgetter('salary'), reverse = True)

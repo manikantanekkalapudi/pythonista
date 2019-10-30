@@ -1,3 +1,7 @@
+'''
+video-> https://youtu.be/CqvZ3vGoGs0
+'''
+
 # importing my_module
 import my_module # From this statement we're able to access all the functions, variables and etc. in the file
 
@@ -12,6 +16,3 @@ print(index)
 
 import sys
 print(sys.path) # This will print all the modules python will look for when importing something
-
-
-

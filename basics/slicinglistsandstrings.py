@@ -1,6 +1,8 @@
 '''Slicing Lists and Strings in Python
 
 Slicing helps us to get the required substring from string and element(s) in list
+
+video-> https://youtu.be/ajrtAuDg3yw
 '''
 
 # Declaring a list of numbers

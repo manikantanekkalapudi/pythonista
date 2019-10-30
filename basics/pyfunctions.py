@@ -1,5 +1,6 @@
 '''Functions in Python
 DRY -> Don't repeat yourself
+video-> https://youtu.be/9Os0o3wzS_I
 '''
 
 # Function declaration with pass statement
@@ -13,6 +14,7 @@ print(fun()) # This'll print None
 def hello_func():
     print('This is a function!')
 
+# Function call
 hello_func()
 
 # Function with return statement
@@ -51,7 +53,7 @@ info = {'name': 'Mani', 'age': '27'}
 
 ''' If you pass the list and dict values as is, it'll return 'agrs->(['Math', 'art'], {'name': 'Mani', 'age': '27'}), and kwargs->{}' 
 This is not desired. We need to unpack the list and dict and pass them as values like the above example. 
-For that we should use *<listname> and **<dictname>'''
+For that we should use *<listname> and **<dictname> i.e., *<args_name> to unpack args and **<kwargs_name> to unpack kwargs'''
 
 student_info(courses, info)
 

@@ -1,13 +1,17 @@
-'''Property Decorators- Getters, Setters and Deleters'''
+'''
+Property Decorators- Getters, Setters and Deleters in Python
+video-> https://youtu.be/jCzT9XFZ5bw
+'''
+
 class Employee:
 
     # '''__init__ is the constructor for the class and 
     # all the variables that the class takes can be initialized here
     def __init__(self, first, last):
         # Instance variables initialized in the constructor
-        self.first = first;
-        self.last = last;
-        # self.email = first +'.'+ last +'@company.com' ;
+        self.first = first
+        self.last = last
+        # self.email = first +'.'+ last +'@company.com'
     
     # Method call is the not the right way because we've to change every single instance of the email attibute
     # to this function call. Now, adding @property will above the method will not change anything.
@@ -54,7 +58,7 @@ print(emp_1.email)
 
 # Printing full name->The first name is the latest one here
 # print(emp_1.fullname()) #This will be used when it's a class function
-# The below line is a getter attribute(not sure what to call)
+# The below line is a getter method to delete the full name of an employee
 print(emp_1.fullname)
 
 # Deleter for full name

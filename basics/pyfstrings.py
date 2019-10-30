@@ -1,4 +1,6 @@
-'''F-Strings - How to Use Them and Advanced String Formatting in Python'''
+'''F-Strings - How to Use Them and Advanced String Formatting in Python
+video-> https://youtu.be/nghuHvKLhJA
+'''
 # F-Strings -> py >= v3.6
 
 # Creating a normal string using string formatting

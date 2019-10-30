@@ -1,4 +1,7 @@
-# Employee class to replicate the Employee Management System 
+'''' Employee class to replicate the Employee Management System
+video-> https://youtu.be/ZDa-Z5JzLYM
+'''
+
 class Employee:
 
     # Class variables
@@ -9,10 +12,10 @@ class Employee:
     all the variables that the class takes can be initialized here'''
     def __init__(self, first, last, pay):
         # Instance variables initialized in the constructor
-        self.first = first;
-        self.last = last;
-        self.email = first.lower() +'.'+ last.lower() +'@company.com' ;
-        self.pay = pay;
+        self.first = first
+        self.last = last
+        self.email = first.lower() +'.'+ last.lower() +'@company.com'
+        self.pay = pay
         
         # This variable doesn't need to have 'self' as it belongs to the class and not any particular instance
         Employee.num_of_emps += 1
@@ -30,8 +33,8 @@ class Employee:
         self.pay = self.pay * self.raise_amount 
 
 # Initializing Employee class with the suitable input values for the constructor
-emp1 = Employee('Manikantha', 'Nekkalapudi', 50000);
-emp2 = Employee('Test', 'User', 60000);
+emp1 = Employee('Manikantha', 'Nekkalapudi', 50000)
+emp2 = Employee('Test', 'User', 60000)
 # Printing the class variable after instantiating
 print(emp1.email)
 

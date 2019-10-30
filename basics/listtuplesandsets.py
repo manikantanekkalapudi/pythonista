@@ -2,6 +2,8 @@
 List-> Hetrogenous collection of items which are both ordered and mutable
 Tuple-> Hetrogenous collection of items which are ordered and NOT mutable
 Set-> Hetrogenous collection of items which are neither ordered nor mutable
+
+video-> https://youtu.be/W8KRzm-HUcc
 '''
 
 # Declaring a list of string values
@@ -123,10 +125,10 @@ tup = ('Physics', 'Math', 'Humanities', 'History', 'CompSci', 'Art')
 # Indexing in tuple
 print(tup[0]) # This works same as the list
 
-# Modifying elements in a tuple
+# Modifying elements in a tuple -> Tuple is immutable
 # tup[0] = 'Commerce' #This will throw 'TypeError: 'tuple' object does not support item assignment' error
 
-# Set declaration
+# Set declaration -> Neither ordered not mutable
 course_set = {'Biology', 'Math', 'Humanities', 'History', 'CompSci', 'Art'}
 print(course_set) # The above order of elements in the set is not maintained because Set doesn't have an order
 
